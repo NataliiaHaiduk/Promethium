@@ -29,7 +29,7 @@ describe('HomePage', () => {
 
     });
 
-    it.only('TC2 Verify sign up', function () {
+    it('TC2 Verify sign up', function () {
 
         homePage.clickTryNowBtn();
         cy.url().should('include', this.data.signUpURL);
