@@ -1,0 +1,4 @@
+{
+   "titleText": "Thank you for signing up.",
+   "confirmationURL": "/user/confirmation?email="
+}
