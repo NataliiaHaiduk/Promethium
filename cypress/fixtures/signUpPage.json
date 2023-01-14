@@ -1,0 +1,6 @@
+{
+    "signUpURL": "user/register",
+    "arertEmptyRequiredInput": "is required",
+    "requiredFieldCount": "5",
+    "jobFunction": ["Data Governance", "Data Leader - Executive", "Tech Leader - Executive"]
+}
