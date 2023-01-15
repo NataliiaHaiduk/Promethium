@@ -23,7 +23,7 @@ describe('HomePage', () => {
 
     });
 
-    it.only('TC3 Verify Database subheading and its content on Data Connectors Page', function () {
+    it('TC3 Verify Database subheading and its content on Data Connectors Page', function () {
         
         //TODO "verify menu is visible" 
         homePage.clickProductDataConnectorsSubMenu();
