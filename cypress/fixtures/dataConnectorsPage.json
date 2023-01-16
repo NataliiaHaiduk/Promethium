@@ -1,5 +1,5 @@
 {
-    "URL": "promethium-data-connectors",
+    "URL": "/promethium-data-connectors",
     "dataBaseSubTitleItemCount": "17",
     "dataBaseSubTitleItemName": ["Microsoft SQL Server", "MySQL", "PostgreSQL", "Teradata"]
 }
