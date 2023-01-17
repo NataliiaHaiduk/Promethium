@@ -1,6 +1,4 @@
 const { defineConfig } = require("cypress");
-const {downloadFile} = require('cypress-downloadfile/lib/addPlugin');
-const { removeDirectory } = require('cypress-delete-downloads-folder');
 
 module.exports = defineConfig({
   viewportWidth: 1920,
@@ -9,8 +7,7 @@ module.exports = defineConfig({
   defaultCommandTimeout: 7000,
   e2e: {
     setupNodeEvents(on, config) {
-      on('task', {downloadFile});
-      on('task', { removeDirectory });
+      // implement node event listeners here
     },
     baseUrl: 'http://promethium.ai/'
   },
