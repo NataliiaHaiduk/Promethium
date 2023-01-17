@@ -12,11 +12,11 @@ class HomePage {
         getResourcesMenu: () => cy.get('#comp-jwtopy712'),
         getResourcesCollateralWebinarsSubMenu: () => cy
             .get('#comp-jwtopy712 ul a[href="https://www.pm61data.com/resource-library"]')
-            //TODO figure out better way to interact with dropdown SubMenu
-       
+            
     };
 
     clickTryNowBtn () {
+        cy.wait(7000)
         this.elements.getTryNowBtn().invoke('removeAttr', 'target').click();
     };
 
@@ -26,11 +26,6 @@ class HomePage {
         });
     };
 
-    // clickResourcesCollateralWebinarsSubMenu () {
-    //     this.elements.getResourcesMenu().realHover().then(() => {
-    //         this.elements.getResourcesCollateralWebinarsSubMenu().click({force: true});
-    //     });
-    // };
     clickResourcesCollateralWebinarsSubMenu () {
         this.elements.getResourcesMenu().realHover().then(() => {
             this.elements.getResourcesCollateralWebinarsSubMenu().click({force: true});

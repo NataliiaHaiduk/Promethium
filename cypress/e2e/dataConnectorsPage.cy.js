@@ -25,7 +25,7 @@ describe('HomePage', () => {
 
     it('TC3 Verify Database subheading and its content on Data Connectors Page', function () {
         
-        //TODO "verify menu is visible" 
+      
         homePage.clickProductDataConnectorsSubMenu();
         cy.url().should('include', this.dataConnectors.URL);
         dataConnectorsPage.elements.getDatabaseSubTitleItemImg()
@@ -38,6 +38,3 @@ describe('HomePage', () => {
     });
 
 });
-// If the cursor is hovered over Product, a menu should be displayed. Click on Data Connectors. 
-// It should change to the URL '/promethium-data-connectors', and under the Database subheading 17 images should appear. 
-// Verify that the texts include Microsoft SQL Server, MySQL, PostgreSQL, Teradata
