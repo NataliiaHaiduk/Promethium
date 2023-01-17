@@ -39,14 +39,6 @@ class SignUpPage {
         this.elements.getJobFunctionItem().contains(jobFunction).click();
     };
 
-    //need better way to wait for element spinning signh up button
-    // waitLoadingEnd () {
-    //     //fix this selector
-    //     cy.intercept('span.ant-btn-loading-icon').as('signUpLoadingBtn');
-    //     cy.wait(20000)
-    //     cy.wait('@signUpLoadingBtn', 100000 );
-    // }
-
 };
 
 export default SignUpPage;

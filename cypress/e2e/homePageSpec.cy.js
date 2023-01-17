@@ -21,9 +21,6 @@ describe('HomePage', () => {
 
         homePage.elements.getLogo().should('be.visible');
         homePage.elements.getLogo().invoke('attr', 'src').should('contain', this.data.logoUrl);
-        
-        //maybe I should use this line
-        //homePage.elements.getTitleFirst().contains(this.data.titleFirst).should('be.visible')
                                                                                    
         homePage.elements.getTitleFirst().should('be.visible');
         homePage.elements.getTitleFirst().should('have.text', this.data.titleFirst);
