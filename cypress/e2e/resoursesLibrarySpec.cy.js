@@ -1,5 +1,5 @@
 /// <reference types="cypress"/>
-//<reference types="cypress-downloadfile"/>
+/// <reference types="cypress-downloadfile"/>
 
 
 import HomePage from "../PageObjects/HomePage.js"
@@ -39,9 +39,12 @@ describe('HomePage', () => {
         cy.downloadFile(this.resourcesLibrary.SolutionForDbtDownloadUrl,'cypress/downloads','solutionForDbt.pdf');
         cy.readFile('cypress/downloads/solutionForDbt.pdf')
             //.should('contain', this.resourcesLibrary.SolutionForDbtPdfContent[0])
-        });
+        //});
+
+        cy.deleteDownloadsFolder();
 
     });
+})
     
     // From the Home Page, hover the mouse over Resources, and click on Collateral & Webinars. 
     // Download the file related to Solution For dbt™ and verify that the downloaded PDF has 4 pages 

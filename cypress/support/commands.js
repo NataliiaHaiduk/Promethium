@@ -26,3 +26,4 @@
 
 import "cypress-real-events";
 require('cypress-downloadfile/lib/downloadFileCommand');
+require('cypress-delete-downloads-folder').addCustomCommand();
