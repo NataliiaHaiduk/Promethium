@@ -33,9 +33,6 @@ describe('HomePage', () => {
         homePage.clickResourcesCollateralWebinarsSubMenu();
         cy.url().should('include', this.resourcesLibrary.URL);
 
-        // let url1 = resourcesLibraryPage.elements.getSolutionForDbtBtn().invoke('attr', 'href')
-        // cy.log(url1)
-
         resourcesLibraryPage.elements.getSolutionForDbtBtn().then(($btn) => {
             let url1 = $btn.attr('href');
             expect(url1).eq(this.resourcesLibrary.SolutionForDbtDownloadUrl);
