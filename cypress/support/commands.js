@@ -25,3 +25,4 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import "cypress-real-events";
+require('cypress-downloadfile/lib/downloadFileCommand');

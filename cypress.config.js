@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const {downloadFile} = require('cypress-downloadfile/lib/addPlugin');
 
 module.exports = defineConfig({
   viewportWidth: 1920,
@@ -7,7 +8,7 @@ module.exports = defineConfig({
   defaultCommandTimeout: 7000,
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      on('task', {downloadFile});
     },
     baseUrl: 'http://promethium.ai/'
   },

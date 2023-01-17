@@ -2,13 +2,9 @@
 //<reference types="cypress-downloadfile"/>
 
 
-// import HomePage from "../PageObjects/HomePage.js";
-// import ResourcesLibraryPage from "../PageObjects/ResourcesLibraryPage.js";
 import HomePage from "../PageObjects/HomePage.js"
 import ResourcesLibraryPage from "../PageObjects/ResourcesLibraryPage.js";
 
-
-//const homePage = new HomePage();
 const homePage = new HomePage();
 const resourcesLibraryPage = new ResourcesLibraryPage();
 
@@ -38,27 +34,11 @@ describe('HomePage', () => {
             expect(url1).eq(this.resourcesLibrary.SolutionForDbtDownloadUrl);
         })
 
-
-
-
-        // resourcesLibraryPage.clickSolutionForDbtBtn();
-        // cy.downloadFile(this.resourcesLibrary.SolutionForDbtDownloadUrl,'downloads','solutionForDbt.pdf');
-        // cy.readFile('downloads/solutionForDbt.pdf',{timeout: 20000})
-        // .should('contain',this.resourcesLibrary.SolutionForDbtPdfContent[0])
-
-
-
-          //cy.verifyDownload('solutionForDbt.pdf');
-
-          //cy.task('readPdf', 'downloads/solutionForDbt.pdf').should('contain', 'Hello darkness my old friend')
-        // cy.readFile('downloads/solutionForDbt.pdf',{timeout: 20000}).then(context => {
-        //     expect(context).contain(this.resourcesLibrary.SolutionForDbtPdfContent[0])
-        //     //cy.log(context)
-        // })
-       
-            //cy.log(context)
-        
-        
+        //create unic file name
+        resourcesLibraryPage.clickSolutionForDbtBtn();
+        cy.downloadFile(this.resourcesLibrary.SolutionForDbtDownloadUrl,'cypress/downloads','solutionForDbt.pdf');
+        cy.readFile('cypress/downloads/solutionForDbt.pdf')
+            //.should('contain', this.resourcesLibrary.SolutionForDbtPdfContent[0])
         });
 
     });
