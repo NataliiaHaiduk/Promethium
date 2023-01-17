@@ -34,13 +34,17 @@ describe('HomePage', () => {
             expect(url1).eq(this.resourcesLibrary.SolutionForDbtDownloadUrl);
         })
 
-        //create unic file name
         resourcesLibraryPage.clickSolutionForDbtBtn();
         cy.downloadFile(this.resourcesLibrary.SolutionForDbtDownloadUrl,'cypress/downloads','solutionForDbt.pdf');
         cy.readFile('cypress/downloads/solutionForDbt.pdf')
-            //.should('contain', this.resourcesLibrary.SolutionForDbtPdfContent[0])
-        //});
-
+        
+        //this is how I would verify file content but cypress crash each time
+        // .then( content => {
+        //     this.resourcesLibrary.SolutionForDbtPdfContent.forEach(element => {
+        //         expect(content).contain(this.resourcesLibrary.SolutionForDbtPdfContent[element])
+        //     });
+        // })
+            
         cy.deleteDownloadsFolder();
 
     });
