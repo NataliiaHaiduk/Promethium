@@ -25,5 +25,3 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import "cypress-real-events";
-require('cypress-downloadfile/lib/downloadFileCommand');
-require('cypress-delete-downloads-folder').addCustomCommand();
